@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace Assignment6
 {
-    public partial class Form1 : Form
+    public partial class ChartForm : Form
     {
-        public Form1()
+        public ChartForm(int ChartNum)
         {
             InitializeComponent();
         }
 
-        private void graphSelect_cbx_SelectedIndexChanged(object sender, EventArgs e)
+        private void ChartForm_Load(object sender, EventArgs e)
         {
-            select_btn.Enabled = true;
+
         }
 
-        private void select_btn_Click(object sender, EventArgs e)
+        private void ChartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ChartForm cf = new ChartForm(0);
-
-            cf.Show();
-            this.Hide();
+            Environment.Exit(0);
         }
     }
 }

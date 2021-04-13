@@ -68,9 +68,11 @@ namespace Assignment6
             this.graphSelect_cbx.Name = "graphSelect_cbx";
             this.graphSelect_cbx.Size = new System.Drawing.Size(275, 21);
             this.graphSelect_cbx.TabIndex = 2;
+            this.graphSelect_cbx.SelectedIndexChanged += new System.EventHandler(this.graphSelect_cbx_SelectedIndexChanged);
             // 
             // select_btn
             // 
+            this.select_btn.Enabled = false;
             this.select_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.select_btn.Location = new System.Drawing.Point(265, 306);
             this.select_btn.Name = "select_btn";
@@ -78,6 +80,7 @@ namespace Assignment6
             this.select_btn.TabIndex = 3;
             this.select_btn.Text = "Find out for yourself!";
             this.select_btn.UseVisualStyleBackColor = true;
+            this.select_btn.Click += new System.EventHandler(this.select_btn_Click);
             // 
             // Form1
             // 
