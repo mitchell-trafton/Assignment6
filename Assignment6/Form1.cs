@@ -32,7 +32,7 @@ namespace Assignment6
              * the index of the selected dataset to its constructor 
              * before showing it and hiding this form.
              ***********************************************/
-            ChartForm cf = new ChartForm(0);
+            ChartForm cf = new ChartForm(0, this);
 
             cf.Show();
             this.Hide();

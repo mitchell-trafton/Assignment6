@@ -12,9 +12,13 @@ namespace Assignment6
 {
     public partial class ChartForm : Form
     {
-        public ChartForm(int ChartNum)
+        Form ParentForm;//refrence to form that called/created this form, used for returning when this one closes
+
+        public ChartForm(int ChartNum, Form CallingForm)
         {
             InitializeComponent();
+
+            ParentForm = CallingForm;
         }
 
         private void ChartForm_Load(object sender, EventArgs e)
@@ -24,7 +28,12 @@ namespace Assignment6
 
         private void ChartForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            ParentForm.Show();   
+        }
+
+        private void return_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
